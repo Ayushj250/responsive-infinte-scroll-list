@@ -1,0 +1,47 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: coral;
+}
+
+.loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px;
+    border: rgb(231, 225, 225) solid 2px;
+}
+
+.btn {
+    background-color: rgb(0 231 255);
+    margin: 5px;
+    padding: 5px;
+    width: 150px;
+    border-radius: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    border: #00000012 solid 1px;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.error {
+    color: crimson;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 450px) {
+    .btn{
+        width: 80px;
+        font-size: small;
+    }
+    
+}

@@ -1,0 +1,25 @@
+.inputContainer{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label {
+    color: white;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.input {
+    border-radius: 8px;
+    height: 20px;
+    border: none;
+    padding: 5px;
+}
+
+.input:focus-visible {
+    border: rgb(30, 177, 221) solid 2px ;
+    outline: none;
+}

@@ -1,0 +1,39 @@
+.skeleton {
+    opacity: 0.7;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.img-placeholder {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin: 1rem;
+}
+
+.name-placeholder {
+    width: 50%;
+    height: 0.75rem;
+    margin-bottom: 0.25rem;
+    border-radius: 0.125rem;
+}
+
+.skeleton-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 20vw;
+    margin: 5px;
+    flex-wrap: wrap;
+}
