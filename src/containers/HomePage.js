@@ -21,6 +21,12 @@ function HomePage(props) {
 
     const dispatchAction = useDispatch();
 
+    useEffect(()=>{
+        window.addEventListener("scroll",debounce(handleScroll,300));
+
+        return () => window.removeEventListener("scroll", debounce(handleScroll,300));
+    },[]);
+
     useEffect(() => {
         dispatchAction(load());
     }, [dispatchAction]);
@@ -69,17 +75,17 @@ function HomePage(props) {
 
     const handleOnClick = (e) => {
         dispatchAction(toggleLogin());
-    }
+    };
+
     const handleScroll = (e) => {
-        if (e.target.scrollHeight - e.target.clientHeight === e.target.scrollTop) {
+        if (e.target.scrollingElement.scrollHeight - e.target.scrollingElement.clientHeight === e.target.scrollingElement.scrollTop) {
             setCount(prev => prev + 1);
         }
     };
-
     return (
-        <div className="contactCardContainer" onScroll={debounce(handleScroll, 200)}>
+        <div className="contactCardContainer" >
             <button className="btn btn-pos" onClick={handleOnClick}>Log Out</button>
-            <div className="cards">
+            <div className="cards" >
                 {getCards()}
                 {loading && getSkeleton()}
             </div>
